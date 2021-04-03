@@ -6,6 +6,7 @@ defmodule RelacionamentoEntidades.Repo.Migrations.CreateMealTable do
       add :description, :string
       add :calories, :integer
       add :date, :utc_datetime
+      add :user_id, references(:users)
 
       timestamps()
     end

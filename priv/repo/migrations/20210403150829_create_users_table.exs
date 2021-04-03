@@ -5,7 +5,7 @@ defmodule RelacionamentoEntidades.Repo.Migrations.CreateUsersTable do
     create table(:users) do
       add :name, :string
       add :cpf, :string
-      add :email, string
+      add :email, :string
 
       timestamps()
     end

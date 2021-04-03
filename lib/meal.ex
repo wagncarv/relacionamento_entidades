@@ -2,9 +2,9 @@ defmodule RelacionamentoEntidades.Meal do
   use Ecto.Schema
   import Ecto.Changeset
   alias Ecto.Changeset
-  # alias RelacionamentoEntidades.User
+  alias RelacionamentoEntidades.User
 
-  @primary_key {:id, :binary_id, autogenerate: true}
+  @primary_key {:id, :id, autogenerate: true}
   @required_params [:description, :calories]
 
   @derive {Jason.Encoder, only: [:id, :description, :calories, :date]}

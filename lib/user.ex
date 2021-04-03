@@ -1,10 +1,10 @@
 defmodule RelacionamentoEntidades.User do
   use Ecto.Schema
   import Ecto.Changeset
-  alias Ecto.Changeset
+  # alias Ecto.Changeset
   alias RelacionamentoEntidades.Meal
 
-  @primary_key {:id, :binary_id, autogenerate: true}
+  @primary_key {:id, :id, autogenerate: true}
   @required_params [:cpf, :email, :name]
 
   @derive {Jason.Encoder, only: [:id, :name, :cpf, :email]}
@@ -25,7 +25,7 @@ defmodule RelacionamentoEntidades.User do
     |> validate_required(@required_params)
     |> validate_length(:cpf, is: 11)
     |> validate_format(:email, ~r/@/)
-    |> unique_constraint([:email])
-    |> unique_constraint([:cpf])
+    |> unique_constraint(:email)
+    |> unique_constraint(:cpf)
   end
 end
