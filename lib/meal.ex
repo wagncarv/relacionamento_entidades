@@ -28,7 +28,7 @@ defmodule RelacionamentoEntidades.Meal do
   end
 
   defp put_date_time(%Changeset{valid?: true, changes: %{} = changes} = changeset) do
-    data = Map.merge(changes, %{data: DateTime.truncate(DateTime.utc_now(), :second)})
+    data = Map.merge(changes, %{date: DateTime.truncate(DateTime.utc_now(), :second)})
     change(changeset, data)
   end
 

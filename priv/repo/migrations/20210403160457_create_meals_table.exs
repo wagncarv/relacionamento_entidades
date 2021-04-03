@@ -3,9 +3,9 @@ defmodule RelacionamentoEntidades.Repo.Migrations.CreateMealTable do
 
   def change do
     create table(:meals) do
-      add :descricao, :string
-      add :calorias, :integer
-      add :data, :utc_datetime
+      add :description, :string
+      add :calories, :integer
+      add :date, :utc_datetime
 
       timestamps()
     end
