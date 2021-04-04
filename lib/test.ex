@@ -3,10 +3,13 @@ defmodule Test do
   alias RelacionamentoEntidades.Meal
   alias RelacionamentoEntidades.Repo
   alias RelacionamentoEntidades.Users.Create
+  alias RelacionamentoEntidades.Users.Get
+  alias RelacionamentoEntidades.Users.Delete
+  alias RelacionamentoEntidades.Users.Update
   alias Ecto.Changeset
 
   def test do
-    params_user = %{name: "Wagner", cpf: "71977976471", email: "mypp@mail.com"}
+    params_user = %{name: "Wagner", cpf: "01966979471", email: "moxttx@mail.com", id: 38}
     # user = User.changeset(params_user)
 
     # Repo.insert(user)
@@ -16,9 +19,11 @@ defmodule Test do
     # Repo.insert(meal)
 
     # ==========================================
-    Create.call(params_user)
+    # Create.call(params_user)
+    # Get.by_id(38)
+    # Delete.call(37)
+    Update.call(params_user)
   end
 
   # fim test()
-
 end
