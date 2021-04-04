@@ -7,7 +7,5 @@ defmodule RelacionamentoEntidades.Users.Delete do
       nil -> {:error, "User not found"}
       user -> {:ok, _result} = Repo.delete(user)
     end
-
-    {:ok, "Deleted from database"}
   end
 end

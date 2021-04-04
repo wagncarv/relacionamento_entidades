@@ -7,6 +7,11 @@ defmodule RelacionamentoEntidadesWeb.Router do
 
   scope "/api", RelacionamentoEntidadesWeb do
     pipe_through :api
+
+    get "/", WelcomeController, :index
+    resources "/users", UsersController, except: [:new, :edit]
+
+    get "/meals", ItemsController, :get
   end
 
   # Enables LiveDashboard only for development
