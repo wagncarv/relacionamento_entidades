@@ -22,7 +22,7 @@ defmodule Test do
     # Create.call(params_user)
     # Get.by_id(38)
     # Delete.call(37)
-    Update.call(params_user)
+    # Update.call(params_user)
   end
 
   # fim test()
