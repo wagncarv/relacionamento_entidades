@@ -2,6 +2,10 @@ defmodule RelacionamentoEntidadesWeb.UsersController do
   use RelacionamentoEntidadesWeb, :controller
   alias RelacionamentoEntidades.User
 
+  alias RelacionamentoEntidadesWeb.FallbackController
+
+  action_fallback FallbackController
+
   def create(conn, params) do
     with {:ok, %User{} = user} <- RelacionamentoEntidades.create_user(params) do
       conn

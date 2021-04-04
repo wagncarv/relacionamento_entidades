@@ -11,7 +11,7 @@ defmodule RelacionamentoEntidadesWeb.Router do
     get "/", WelcomeController, :index
     resources "/users", UsersController, except: [:new, :edit]
 
-    get "/meals", ItemsController, :get
+    get "/meals", MealsController, :show
   end
 
   # Enables LiveDashboard only for development
