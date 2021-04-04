@@ -1,8 +1,9 @@
 defmodule RelacionamentoEntidadesWeb.FallbackController do
   use RelacionamentoEntidadesWeb, :controller
-  alias RelacionamentoEntidades.ErrorView
+  alias RelacionamentoEntidadesWeb.ErrorView
 
-  def call(conn, {:error, %{status: 400}}) do
+  # def call(conn, {:errors, %{status: status, result: result}}) do
+  def call(conn, {:errors, _}) do
     conn
     |> put_status(400)
     |> put_view(ErrorView)
