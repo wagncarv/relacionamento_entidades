@@ -9,7 +9,7 @@ defmodule Test do
   alias Ecto.Changeset
 
   def test do
-    params_user = %{name: "Wagner", cpf: "01966979471", email: "moxttx@mail.com", id: 38}
+    # params_user = %{name: "Wagner", cpf: "01176909471", email: "moplut@mail.com"}
     # user = User.changeset(params_user)
 
     # Repo.insert(user)
@@ -19,10 +19,10 @@ defmodule Test do
     # Repo.insert(meal)
 
     # ==========================================
-    # Create.call(params_user)
-    # Get.by_id(38)
-    # Delete.call(37)
-    # Update.call(params_user)
+    # RelacionamentoEntidades.create_user(params_user)
+    # RelacionamentoEntidades.get_user_by_id(41)
+    # RelacionamentoEntidades.delete_user(41)
+    RelacionamentoEntidades.update_user(params_user)
   end
 
   # fim test()
